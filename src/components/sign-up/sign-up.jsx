@@ -46,7 +46,7 @@ class SignUp extends Component {
     }
 
     render(){
-        const { displayName, email, password, confirmPassword }  = this.state;
+        // const { displayName, email, password, confirmPassword }  = this.state;
         return (
             <div className='sign-up'>
                 <h2 className='title'>I do not have an account?</h2>
@@ -55,31 +55,31 @@ class SignUp extends Component {
                     <FormInput
                         type='text'
                         name='displayName'
-                        value={displayName}
+                        value={this.state.displayName}
                         onChange={this.handleChange}
                         label='Display Name'
                         required
                     />
                     <FormInput
                         type='email'
-                        name='Email'
-                        value={email}
+                        name='email'
+                        value={this.state.email}
                         onChange={this.handleChange}
                         label='Email'
                         required
                     />
                     <FormInput
                         type='password'
-                        name='Password'
-                        value={password}
+                        name='password'
+                        value={this.state.password}
                         onChange={this.handleChange}
                         label='Password'
                         required
                     />
                     <FormInput
                         type='password'
-                        name='confirmassword'
-                        value={confirmPassword}
+                        name='confirmPassword'
+                        value={this.state.confirmPassword}
                         onChange={this.handleChange}
                         label='Confirm Password'
                         required
