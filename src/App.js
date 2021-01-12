@@ -56,7 +56,7 @@ class App extends Component{
           <Route 
             exact 
             path='/signin' 
-            render= {() => this.props.currentUser ? 
+            render= { () => this.props.currentUser ? 
               <Redirect to='/' /> 
               : 
               <SignInSignUp /> } 
