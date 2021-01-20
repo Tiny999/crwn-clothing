@@ -39,7 +39,6 @@ const directoryReducer = (state = initalState, action) => {
     switch (action.type) {
         default:
             return state
-            break;
     }
 };
 
