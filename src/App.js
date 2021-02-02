@@ -7,6 +7,7 @@ import { createStructuredSelector } from "reselect";
 import './App.css';
 
 import { setCurrentUser } from './redux/user/user.actions';
+import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 import Homepage from './pages/Homepage/homepage';
 import ShopPage from './pages/shop/Shop';
 import CheckoutPage from './pages/checkout/checkout';
@@ -34,10 +35,9 @@ class App extends Component{
             ...snapShot.data()
           })
         })
-      } 
-      else{
-        setCurrentUser(userAuth);
       }
+      
+      setCurrentUser(userAuth);
     })
   }
 
@@ -68,7 +68,8 @@ class App extends Component{
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview
 })
 
 
